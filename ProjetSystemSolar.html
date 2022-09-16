@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--Le menu de Navigation-->
+    <header>
+    <nav>
+        <a class="lienSouligne" href="">Accueil</a>
+        <a class="lienSouligne" href="#">Système solaire</a>
+        <a class="lienSouligne" href="#">Planètes</a>
+        <a class="lienSouligne" href="#">Contact</a>
+    </nav>
+    <button type="button" aria-label="toggle curtain navigation" class="nav-toggler">
+        <span class="line l1"></span>
+        <span class="line l2"></span>
+        <span class="line l3"></span>
+    </button>
+    </header>
+
+   <!--Le loader-->
+<div class="svg">
+  
+    <svg class="loader" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 340">
+       <circle cx="170" cy="170" r="160" stroke="#E2007C"/>
+       <circle cx="170" cy="170" r="135" stroke="#404041"/>
+       <circle cx="170" cy="170" r="110" stroke="#E2007C"/>
+       <circle cx="170" cy="170" r="85" stroke="#404041"/>
+    </svg>
+    
+</div>
+  
+
+<!--Titre intro et Galerie-->
+    <div class="intro">
+        
+        <h1 class="intro--titre">Notre syteme solaire</h1>
+        
+        <h4 class="Citation">"Limiter notre attention aux questions terrestres serait limiter l'esrprit humain"<br><span class="author">Stephen Hawking.</span></h4>
+         
+        <div class="container-flex">
+            <div class="container-pics"> 
+                <div class="slider2">
+                    <img class="active item" src="./Asset/galaxie4.jpeg" alt="">
+                    <img class="item" src="./Asset/galaxie3.jpg" alt="">
+                    <img class="item" src="./Asset/galaxie2.jpeg" alt="">
+                    <img class="item" src="./Asset/galaxie.png" alt="">
+                   <img class="item" src="./Asset/galaxie1.jpg" alt="">
+                </div>
+                <div class="cont-btn">
+                    <div class="btn-nav left">◀</div>
+                    <div class="btn-nav right">▶</div>
+        
+                </div>
+            </div>  
+        
+           </div>
+
+
+
+        
+
+    </div>      
+    <!--Les planètes et leur caractéristique-->
+    <div class="planetes">
+
+        <h2>Mercure</h2>
+        <div class="planetesObjet">
+
+            <div class="planetesObjet--logo"> <img class="logo--planete" src="./Asset/Mercury.png" alt=""></div>
+            <div class="planetesObjet--caracteristique">
+                <ul class="planetesObjet--caracteristique liste">
+                    <li class="planetesObjet--caracteristique  liste1"><span>Temperature</span>de -172oC à  427oC</li>
+                    <li class="planetesObjet--caracteristique  liste1"><span>Type</span>  Planète tellurique</li>
+                    <li class="planetesObjet--caracteristique  liste1"><span>Rayon</span> 2439,7 km</li>
+                    <li class="planetesObjet--caracteristique  liste1"><span>Rotation</span> 58,7 jours terrestres</li>
+                    <li class="planetesObjet--caracteristique  liste1"><span>Info</span>  </li> 
+                </ul>
+                <p>Surface caractérisée par de nombreux cratères, résultats d’impacts météoritiques, elle possède  une atmosphère presque inexistante, mis à part la présence de traces de gaz. </p>
+          </div> 
+
+        </div>
+        <h2>Vénus</h2>
+        <div class="planetesObjet">
+
+            <div class="planetesObjet--logo"> <img class="logo--planete" src="./Asset/Venus.png" alt=""></div>
+            <div class="planetesObjet--caracteristique">
+                <ul class="planetesObjet--caracteristique liste">
+                    <li class="planetesObjet--caracteristique  liste1"><span>Temperature</span> de 453oC en moyenne</li>
+                    <li class="planetesObjet--caracteristique  liste1"><span>Type</span>  Planète tellurique</li>
+                    <li class="planetesObjet--caracteristique  liste1"><span>Rayon</span> 6051,8 km</li>
+                    <li class="planetesObjet--caracteristique  liste1"><span>Rotation</span>243 jours terrestres</li>
+                    <li class="planetesObjet--caracteristique  liste1"><span>Info</span>  </li> 
+                </ul>
+                <p>Relief qui présente de nombreuses montagnes, des canyons, des volcans et qui est criblé de cratères.Elle a aussi une Atmosphère principalement composée de dioxyde de carbone mais aussi d’azote , de dioxyde de soufre et d’acide sulfurique.</p>
+            </div> 
+
+        </div>
+        <h2>Terre</h2>
+        <div class="planetesObjet">
+
+            <div class="planetesObjet--logo"> <img class="logo--planete" src="./Asset/earth.png" alt=""></div>
+            <div class="planetesObjet--caracteristique">
+                <ul class="planetesObjet--caracteristique liste">
+                    <li class="planetesObjet--caracteristique  liste1"><span>Temperature</span>Températures variant entre -60oC et 45oC</li>
+                    <li class="planetesObjet--caracteristique  liste1"><span>Type</span>  Planète tellurique</li>
+                    <li class="planetesObjet--caracteristique  liste1"><span>Rayon</span> 6371 km</li>
+                    <li class="planetesObjet--caracteristique  liste1"><span>Rotation</span>24 heures terrestres</li>
+                    <li class="planetesObjet--caracteristique  liste1"><span>Info</span></li> 
+                </ul>
+                <p>Sol riche en sels minéraux, présence des cratères et relief très varié avec une importantes quantités d’eau (sous différentes formes, surtout salée), caractéristique de la présence de vie. Elle possède un satellite connu : la lune.</p>
+            </div> 
+
+        </div>
+        <h2>Mars</h2>
+        <div class="planetesObjet">
+
+            <div class="planetesObjet--logo"> <img class="logo--planete" src="./Asset/Mars.png" alt=""></div>
+            <div class="planetesObjet--caracteristique">
+                <ul class="planetesObjet--caracteristique liste">
+                    <li class="planetesObjet--caracteristique  liste1"><span>Temperature</span>de -123oC à 37oC</li>
+                    <li class="planetesObjet--caracteristique  liste1"><span>Type</span>Planète tellurique</li>
+                    <li class="planetesObjet--caracteristique  liste1"><span>Rayon</span>3389,5 km</li>
+                    <li class="planetesObjet--caracteristique  liste1"><span>Rotation</span>24,63 heures terrestres</li>
+                    <li class="planetesObjet--caracteristique  liste1"><span>Info</span>  </li> 
+                </ul>
+                <p>Sol rouge caractérisé par la présence d’hématite et relief très accentué et présence de nombreux cratères.Présence de glace aux pôles</p>
+            </div> 
+
+        </div>
+        <h2>Jupiter</h2>
+        <div class="planetesObjet">
+
+            <div class="planetesObjet--logo"> <img class="logo--planete" src="./Asset/Jupiter.png" alt=""></div>
+            <div class="planetesObjet--caracteristique">
+                <ul class="planetesObjet--caracteristique liste">
+                    <li class="planetesObjet--caracteristique  liste1"><span>Temperature</span> dans la partie extérieure des nuages ~ -153oC</li>
+                    <li class="planetesObjet--caracteristique  liste1"><span>Type</span>Planète géante gazeuse</li>
+                    <li class="planetesObjet--caracteristique  liste1"><span>Rayon</span>69911 km</li>
+                    <li class="planetesObjet--caracteristique  liste1"><span>Rotation</span>9,93 heures terrestres</li>
+                    <li class="planetesObjet--caracteristique  liste1"><span>Info</span>  </li> 
+                </ul>
+                <p>Jupiter est la plus grosse planète du système solaire, elle a aucune lithosphère, même si un noyau est présent. Elle a aussi 67 satellites connus dont Ganymède, Io et Europe. </p>
+            </div> 
+
+        </div>
+        <h2>Saturn</h2>
+        <div class="planetesObjet">
+
+            <div class="planetesObjet--logo"> <img class="logo--planete" src="./Asset/Saturn.png" alt=""></div>
+            <div class="planetesObjet--caracteristique">
+                <ul class="planetesObjet--caracteristique liste">
+                    <li class="planetesObjet--caracteristique  liste1"><span>Temperature</span> dans la partie extérieure des nuages ~ -185oC</li>
+                    <li class="planetesObjet--caracteristique  liste1"><span>Type</span>Planète géante gazeuse</li>
+                    <li class="planetesObjet--caracteristique  liste1"><span>Rayon</span>58232 km</li>
+                    <li class="planetesObjet--caracteristique  liste1"><span>Rotation</span>10,66 heures terrestres</li>
+                    <li class="planetesObjet--caracteristique  liste1"><span>Info</span>  </li> 
+                </ul>
+                <p>Présence de milliers d’anneaux colorés qui sont faits de glace et de roche et aucune lithosphère, même si un noyau est présent.</p>
+            </div> 
+
+        </div>
+        <h2>Uranus</h2>
+        <div class="planetesObjet">
+
+            <div class="planetesObjet--logo"> <img class="logo--planete" src="./Asset/Uranus.png" alt=""></div>
+            <div class="planetesObjet--caracteristique">
+                <ul class="planetesObjet--caracteristique liste">
+                    <li class="planetesObjet--caracteristique  liste1"><span>Temperature</span> dans la partie extérieure des nuages ~ -214oC</li>
+                    <li class="planetesObjet--caracteristique  liste1"><span>Type</span>Planète géante gazeuse</li>
+                    <li class="planetesObjet--caracteristique  liste1"><span>Rayon</span>25362 km</li>
+                    <li class="planetesObjet--caracteristique  liste1"><span>Rotation</span>17,2 heures terrestres</li>
+                    <li class="planetesObjet--caracteristique  liste1"><span>Info</span>  </li> 
+                </ul>
+                <p>Qualifiée de géante de glace elle a aucune lithosphère, même si un noyau est présent. Elle a aussi 27 satellites connus. </p>
+            </div> 
+
+        </div>
+        <h2>Neptune</h2>
+        <div class="planetesObjet">
+
+            <div class="planetesObjet--logo"> <img class="logo--planete" src="./Asset/Neptune.png" alt=""></div>
+            <div class="planetesObjet--caracteristique">
+                <ul class="planetesObjet--caracteristique liste">
+                    <li class="planetesObjet--caracteristique  liste1"><span>Temperature</span> dans la partie extérieure des nuages ~ -225oC</li>
+                    <li class="planetesObjet--caracteristique  liste1"><span>Type</span>Planète géante gazeuse</li>
+                    <li class="planetesObjet--caracteristique  liste1"><span>Rayon</span>24622 km </li>
+                    <li class="planetesObjet--caracteristique  liste1"><span>Rotation</span>16,11 heures terrestres</li>
+                    <li class="planetesObjet--caracteristique  liste1"><span>Info</span>  </li> 
+                </ul>
+                <p>Qualifiée de géante de glace, des vents violents pouvant aller jusqu’à 2000 km/h, elle a aucune lithosphère, même si un noyau est présent. Elle a aussi 14 satellites connus.</p>
+            </div> 
+
+        </div>
+     <!--Animation Explosion-->
+        <div class="container">
+            <h5>
+                <span>S</span>
+                <span>P</span>
+                <span>A</span>
+                <span>C</span>
+                <span>E</span>
+                
+            </h5>
+        </div>
+        <!--Animation deformation-->
+    <div class="container-anim">
+    
+        <div class="box2">
+
+        <div class="animDeformation">
+            <div class="circle"></div>
+            <p>Space</p>
+        </div> 
+    </div>
+    </div>
+     <!--   <div class="animDeformation">
+            <div class="circle2"></div>
+            <p>Haut de page</p>
+        </div> 
+    </div> -->
+   
+
+
+
+
+    <!--Le Footer-->
+    <div class="footerBox">
+        <footer>
+            <p>Copyright © 1997-2022 Nasa. Tous droits réservés.</p>
+            
+        </footer>
+    </div>
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="script.js"></script>
+   
+</body>
+</html>

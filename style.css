@@ -1,0 +1,486 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Space1";
+  src: url(./asset/font/SPACE.ttf);
+}
+@font-face {
+  font-family: "Space2";
+  src: url(./asset/font/BMSPA___.ttf);
+}
+@font-face {
+  font-family: "Space3";
+  src: url(./asset/font/Fh_Space.otf);
+}
+*, ::after, ::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  width: 100%;
+  background: url(./asset/etoilefond.jpg) fixed;
+  background-size: cover;
+}
+
+/*********Le Loader*********/
+.svg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #ff0909;
+  background: rgb(0, 0, 0);
+  z-index: 3000;
+  right: 50%;
+  position: absolute;
+}
+
+.loader {
+  max-width: 15rem;
+  width: 100%;
+  height: auto;
+  stroke-linecap: round;
+  position: fixed;
+}
+
+circle {
+  fill: none;
+  stroke-width: 3.5;
+  animation-name: preloader;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  transform-origin: 170px 170px;
+  will-change: transform;
+}
+circle:nth-of-type(1) {
+  stroke-dasharray: 550px;
+}
+circle:nth-of-type(2) {
+  stroke-dasharray: 500px;
+}
+circle:nth-of-type(3) {
+  stroke-dasharray: 450px;
+}
+circle:nth-of-type(4) {
+  stroke-dasharray: 300px;
+}
+circle:nth-of-type(1) {
+  animation-delay: -0.15s;
+}
+circle:nth-of-type(2) {
+  animation-delay: -0.3s;
+}
+circle:nth-of-type(3) {
+  animation-delay: -0.45s;
+}
+circle:nth-of-type(4) {
+  animation-delay: -0.6s;
+}
+
+@keyframes preloader {
+  50% {
+    transform: rotate(360deg);
+  }
+}
+.fondu-out {
+  opacity: 0;
+  transition: opacity 0.4s ease-out;
+}
+
+/*******************************/
+/*****Le Menu Hamburger******/
+.nav-toggler {
+  position: fixed;
+  z-index: 1000;
+  top: 20px;
+  right: 20px;
+  height: 50px;
+  width: 50px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+}
+
+.line {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #f1f1f1;
+  transition: transform 0.3s ease-out, opacity 0.1s ease-out;
+}
+
+.l1 {
+  transform: translateY(-10px);
+}
+
+.l3 {
+  transform: translateY(10px);
+}
+
+.nav-toggler.active .l1 {
+  transform: translateY(0px) rotate(135deg);
+}
+
+.nav-toggler.active .l2 {
+  opacity: 0;
+}
+
+.nav-toggler.active .l3 {
+  transform: translateY(0px) rotate(-135deg);
+}
+
+nav {
+  position: fixed;
+  width: 100vw;
+  min-height: 55vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: rgba(0, 0, 0, 0.735);
+  border-bottom: 1px solid white;
+  transform: translateY(-123%);
+  transition: transform 0.3s cubic-bezier(0.73, 0.11, 0.67, 0.84);
+  z-index: 1000;
+}
+
+nav.active {
+  transform: translateX(0) translateY(-22%);
+}
+
+nav a {
+  font-family: Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  color: white;
+  font-size: clamp(20px, 3vw, 30px);
+  display: block;
+  margin: 20px 0;
+  text-decoration: none;
+  font-weight: 100;
+}
+
+/***********************/
+/**********Intro titre et Galerie*/
+.intro {
+  width: 100%;
+  background-color: rgba(254, 254, 254, 0);
+  margin-top: 50px;
+}
+.intro--titre {
+  text-align: center;
+  font-size: clamp(40px, 13vw, 130px);
+  margin-bottom: 40px;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(45deg, rgb(27, 6, 146), #9d8cf9);
+  color: transparent;
+  font-family: "Space1", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  animation: apparitionH1 3s ease-in-out;
+}
+@keyframes apparitionH1 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.intro h4 {
+  color: white;
+  text-align: center;
+  font-size: clamp(15px, 2.5vw, 25px);
+  line-height: 30px;
+  height: 70px;
+  font-family: "Space3", Verdana, Geneva, Tahoma, sans-serif;
+  padding: 5px;
+}
+.intro .author {
+  font-size: 15px;
+  font-style: italic;
+  padding-bottom: 90px;
+}
+
+.container-flex {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container.pics {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 50px;
+}
+
+.slider2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: black;
+}
+
+.slider2 img {
+  width: 80%;
+  display: none;
+}
+
+img.active {
+  display: block;
+  animation: fade 0.2s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.cont-btn {
+  width: 100%;
+  height: auto;
+  background: rgba(0, 0, 0, 0.42);
+  display: flex;
+  justify-content: center;
+}
+
+.btn-nav {
+  font-size: 50px;
+  margin: 0 15px;
+  cursor: pointer;
+}
+
+.box2 {
+  width: 320px;
+  height: 320px;
+}
+
+/**********Les planétes et leurs cractéristique*******/
+.planetesObjet {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.planetesObjet .planetesObjet--logo {
+  width: 50%;
+}
+.planetesObjet .planetesObjet--caracteristique {
+  width: 50%;
+  list-style-type: none;
+  color: white;
+  font-size: clamp(15px, 2.5vw, 25px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Space3", sans-serif;
+}
+.planetesObjet .planetesObjet--caracteristique .liste1 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  white-space: nowrap;
+}
+.planetesObjet .planetesObjet--caracteristique .liste1 span {
+  color: tomato;
+  font-weight: bold;
+  font-size: 30px;
+}
+.planetesObjet .planetesObjet--caracteristique p {
+  margin-top: -5px;
+  background-color: rgba(2, 2, 2, 0.443);
+  border-radius: 20px;
+  padding: 10px;
+  text-align: center;
+}
+
+.logo--planete {
+  width: 80%;
+  padding-left: 10px;
+}
+
+h2 {
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(45deg, rgb(27, 6, 146), #9d8cf9);
+  text-align: center;
+  font-size: clamp(50px, 8vw, 80px);
+  margin-top: 100px;
+  margin-bottom: 50px;
+  color: transparent;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container {
+  text-align: center;
+  perspective: 1000px;
+}
+
+h5 {
+  font-family: "Space1", Times, serif;
+  font-size: clamp(50px, 15vw, 150px);
+  transform-style: preserve-3d;
+  display: inline-flex;
+  margin-top: 100px;
+  font-weight: 100;
+  letter-spacing: 10px;
+  cursor: pointer;
+  margin-bottom: 0px;
+}
+
+h5 span {
+  pointer-events: none;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(45deg, rgb(27, 6, 146), #9d8cf9);
+  color: transparent;
+}
+
+.container-anim {
+  margin-top: 50px;
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.animDeformation {
+  position: relative;
+  color: #f1f1f1;
+  cursor: pointer;
+  transition: transform 0.4s cubic-bezier(0.23, 1.83, 0.42, 1.19);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.animDeformation:hover {
+  transform: scale(1.2);
+}
+
+.animDeformation p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 25px;
+  letter-spacing: 3px;
+  font-family: "Space3", sans-serif;
+}
+
+.circle {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  border: 3px solid #f1f1f1;
+  animation: 1s linear infinite alternate boxMagic, 4s linear infinite tourne;
+  padding-top: 270px;
+}
+
+@keyframes boxMagic {
+  from {
+    box-shadow: 0 0 0 #feac5e, 0 0 0 #c779d0, 0 0 0 #4bc0c8, 0 0 0 #42bd75;
+  }
+  to {
+    box-shadow: 0 -10px 0 #feac5e, -10px 0 0 #c779d0, 0 10px 0 #4bc0c8, 10px 0 0 #42bd75;
+  }
+}
+@keyframes tourne {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.circle2 {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  border: 3px solid #f1f1f1;
+  animation: 1s linear infinite alternate boxMagic2, 4s linear infinite tourne;
+  padding-top: 230px;
+}
+
+@keyframes boxMagic2 {
+  from {
+    box-shadow: 0 0 0 yellow, 0 0 0 yellow, 0 0 0 yellow, 0 0 0 yellow;
+  }
+  to {
+    box-shadow: 0 -10px 10px red, -10px 0 10px red, 0 10px 10px red, 10px 0 10px red;
+  }
+}
+.footerBox {
+  border-top: 1px dashed white;
+  height: 100px;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-family: "Space2", Verdana, Geneva, Tahoma, sans-serif;
+  font-size: clamp(10px, 2vw, 20px);
+  margin-top: 20px;
+  padding-top: 40px;
+}
+
+.lienSouligne {
+  position: relative;
+  text-decoration: none;
+}
+
+.lienSouligne::before {
+  content: "";
+  position: absolute;
+  background: white;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  transform-origin: 100% 0;
+  transform: scaleX(0);
+  transition: transform 0.4s;
+}
+
+.lienSouligne:hover::before {
+  transform-origin: 0 0;
+  transform: scaleX(1);
+}
+
+@media screen and (max-width: 800px) {
+  .container h5 {
+    margin-top: 50px;
+  }
+  .intro h4 {
+    height: 100px;
+  }
+  .planetesObjet {
+    flex-direction: column;
+  }
+  .planetesObjet .planetesObjet--caracteristique {
+    width: 90%;
+  }
+  .planetesObjet .logo--planete {
+    width: 100%;
+    padding-left: 10px;
+  }
+  .planetesObjet .planetesObjet--logo {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .container h5 {
+    margin-top: 50px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

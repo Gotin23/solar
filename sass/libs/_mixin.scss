@@ -1,0 +1,18 @@
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+@mixin box-font {
+    background-color: rgba(2, 2, 2, 0.443);
+    border-radius: 20px;
+    
+}
+@mixin text-degrade {
+    background-clip: text;
+        -webkit-background-clip: text;
+        background-image: linear-gradient(45deg, rgb(27, 6, 146), #9d8cf9);
+        color: transparent;
+    
+}
